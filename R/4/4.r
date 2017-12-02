@@ -25,7 +25,7 @@ predictions <- predict(model, x_test)
 
 # display confusion matrix with accuracy
 confusionMatrix(predictions$class, y_test)
-
+# visualizing
 plot(model)
 
 # Decision Tree
@@ -35,5 +35,6 @@ irisTree <- ctree(Species~., data = iris)
 # print the tree summary
 print(irisTree)
 #plot the tree
+# visualizing
 plot(irisTree)
 plot(irisTree, type = "simple")
