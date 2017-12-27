@@ -21,6 +21,7 @@ mydata <- data.frame(a = "6969","Salman",",69th",20,"male",1,0)
 write.csv(mydata, "sample.csv", row.names = F)
 
 # explore and visualize, second program
+data <- iris
 summary(data)
 mean(data$Sepal.Length)
 median(data$Sepal.Width)

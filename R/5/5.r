@@ -4,7 +4,7 @@ data(iris)
 
 # split data into train(67%) and test(33%) set
 split = 0.67
-trainIndex <- createDataPartition(iris$Species, p = split, list = FALSE)
+trainIndex <- createDataPartition(iris$Sepal.Length, p = split, list = FALSE)
 trainData <- iris[trainIndex, ]
 testData <- iris[-trainIndex, ]
 
