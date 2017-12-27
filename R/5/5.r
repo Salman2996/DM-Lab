@@ -8,6 +8,9 @@ trainIndex <- createDataPartition(iris$Sepal.Length, p = split, list = FALSE)
 trainData <- iris[trainIndex, ]
 testData <- iris[-trainIndex, ]
 
+x_test = testData[, 2:5]
+y_test = testData[, 1]
+
 # create a simple linear regression model using lm()
 fit <- lm(Sepal.Length~., data = trainData)
 
@@ -16,7 +19,7 @@ summary(fit)
 
 # visualize the results
 # make predictions
-predictions <- predict(fit, data = testData)
+predictions <- predict(fit, data = x_test)
 
 rmse <- mean((iris$Sepal.Length - predictions)^2)
 writeLines("\nRMSE:\n")
